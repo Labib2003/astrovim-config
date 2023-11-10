@@ -6,6 +6,9 @@ return {
 
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
-  { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.tailwindcss" },
+  { import = "astrocommunity.pack.cpp" },
+  { import = "astrocommunity.pack.prisma" },
+  { import = "astrocommunity.pack.html-css" },
+  { import = "astrocommunity.pack.typescript" },
 }

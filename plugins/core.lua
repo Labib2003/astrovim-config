@@ -5,12 +5,12 @@ return {
     opts = function(_, opts)
       -- customize the dashboard header
       opts.section.header.val = {
-        " █████  ███████ ████████ ██████   ██████",
-        "██   ██ ██         ██    ██   ██ ██    ██",
-        "███████ ███████    ██    ██████  ██    ██",
-        "██   ██      ██    ██    ██   ██ ██    ██",
-        "██   ██ ███████    ██    ██   ██  ██████",
+        -- An idiot admires complexity, a genius admires simplicity
+        " [SIMPLICITY > COMPLEXITY] ",
         " ",
+        "An idiot admires complexity",
+        "A genius admires simplicity",
+        "               -Terry Devis",
       }
       return opts
     end,

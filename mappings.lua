@@ -34,6 +34,8 @@ return {
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     ["<c-u>"] = { "<c-u>zz" },
     ["<c-d>"] = { "<c-d>zz" },
+    ["{"] = { "{zz" },
+    ["}"] = { "}zz" },
   },
   t = {
     -- setting a mapping to false will disable it

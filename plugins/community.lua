@@ -13,4 +13,5 @@ return {
   { import = "astrocommunity.pack.prisma" },
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.markdown" },
 }

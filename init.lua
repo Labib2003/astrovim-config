@@ -78,7 +78,14 @@ return {
         group = "WSLYank",
         pattern = "*",
         callback = function()
-          if vim.v.event.operator == "y" then vim.fn.system(clip_path, vim.v.event.regcontents) end
+          if vim.v.event.operator == "y" then
+            if vim.v.event.regname == '"' then -- Character-wise yank
+              vim.fn.system(clip_path, vim.v.event.regcontents)
+            elseif vim.v.event.regname == '""' then -- Linewise yank
+              vim.fn.setreg('"', vim.v.event.regcontents .. "\n")
+              vim.fn.system(clip_path, vim.v.event.regcontents)
+            end
+          end
         end,
       })
     end

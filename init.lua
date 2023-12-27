@@ -68,26 +68,5 @@ return {
   -- This function is run last and is a good place to configuring
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
-  polish = function()
-    -- WSL yank support
-    local clip_path = "/mnt/c/Windows/System32/clip.exe" -- Change this path if needed
-
-    if vim.fn.executable(clip_path) then
-      vim.api.nvim_create_augroup("WSLYank", { clear = true })
-      vim.api.nvim_create_autocmd("TextYankPost", {
-        group = "WSLYank",
-        pattern = "*",
-        callback = function()
-          if vim.v.event.operator == "y" then
-            if vim.v.event.regname == '"' then -- Character-wise yank
-              vim.fn.system(clip_path, vim.v.event.regcontents)
-            elseif vim.v.event.regname == '""' then -- Linewise yank
-              vim.fn.setreg('"', vim.v.event.regcontents .. "\n")
-              vim.fn.system(clip_path, vim.v.event.regcontents)
-            end
-          end
-        end,
-      })
-    end
-  end,
+  polish = function() end,
 }

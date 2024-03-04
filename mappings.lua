@@ -36,6 +36,10 @@ return {
     ["<c-d>"] = { "<c-d>zz" },
     ["{"] = { "{zz" },
     ["}"] = { "}zz" },
+    ["n"] = { "nzz" },
+    ["N"] = { "Nzz" },
+    ["]g"] = { vim.diagnostic.goto_next },
+    ["[g"] = { vim.diagnostic.goto_prev },
   },
   t = {
     -- setting a mapping to false will disable it
